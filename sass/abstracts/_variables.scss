@@ -6,9 +6,13 @@ $red-color:#FF4136;
 $red-color-light: #f3b2ae;
 
 $blue-color:#072652;
+$blue-color-light:#0074D9;
 $orange-color-light:#ecb18e;
 
 //Grid
 $grid-width: 100vw;
 $gutter-vertical: 7rem;
 $gutter-horizontal: 5rem;
+
+//Shadows
+$default-shadow: .5rem 1rem 2rem rgba($black-color,.4);

@@ -1,0 +1,22 @@
+.btn{
+
+    &:link,
+    &:visited{
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        border-radius: .2rem;
+        box-shadow: $default-shadow;
+    }
+
+    &:hover,
+    &:active{
+        background-color: $blue-color;
+        color:$orange-color-light;
+    }
+
+    &__light-blue{
+        background-color: $blue-color-light;
+        color:$white-color;
+    }
+    
+}

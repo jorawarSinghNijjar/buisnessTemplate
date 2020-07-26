@@ -1,0 +1,13 @@
+.hr{
+    width:30%;
+    height: .4rem;
+    display: inline-block;
+
+    &__blue{
+        background-color: $blue-color-light;
+    }
+
+    &__photo{
+        height:10rem;
+    }
+}
