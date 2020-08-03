@@ -1,6 +1,7 @@
 
 body{
   box-sizing: border-box;
+  background-color: white;
 }
 
 *,
@@ -13,6 +14,20 @@ body{
 
 
 html{
-  font-size: 62.5%; /* 62.5% of default 16px = 10px to make 1rem calculations simple*/
+  
+  font-size: 50%;
+
+  @include design(tab-portrait){
+    font-size: 55%; 
+  }
+
+  @include design(desktop){
+    font-size: 62.5%; 
+  }
+  
+  @include design(big-desktop){
+    font-size: 70%; 
+  }
+
 }
 

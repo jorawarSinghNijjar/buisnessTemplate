@@ -1,13 +1,30 @@
 .hr{
-    width:30%;
-    height: .4rem;
+    width:60%;
+    height: .2rem;
     display: inline-block;
+    position: relative;
+
+    &__photo{
+        height:3rem;
+        position: absolute;
+        top:-2rem;
+        left:45%;
+    }
 
     &__blue{
         background-color: $blue-color-light;
     }
 
-    &__photo{
-        height:10rem;
+    @include design(tab-portrait){
+
+        &__photo{
+            height: 3.5rem;
+        }
     }
+    
+}
+
+.center-container{
+    width:100%;
+    @include center-vh;
 }

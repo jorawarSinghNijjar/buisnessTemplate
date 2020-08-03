@@ -1,0 +1,89 @@
+.footer{
+    height:40vh;
+    background-color: $blue-color-dark;
+    color: $orange-color-light;
+    padding:8rem 0 2rem 0;
+
+// Logo Column
+    &__logo-box{
+        height:8rem;
+        text-align:center;
+    }
+
+    &__logo{
+        height: 100%;
+    }
+
+    &__social-icon-list{
+        list-style: none;
+        width:70%;
+        margin:0 auto;
+        text-align: center;
+    }
+
+    &__social-icons{
+        display:inline-block;
+        padding: 1rem;
+
+        & > a:link,
+        & > a:visited{
+            font-size: 2rem;
+            color:$orange-color;
+        }
+    }
+
+    //Footer Nav column
+
+    &__nav-list{
+        list-style: none;
+        padding: 1rem;
+        text-align: center;
+
+        @include design(tab-horizontal){
+            padding-top: 9rem;
+        }
+    }
+
+    &__nav-list-item{
+        font-size: 2rem;
+        display: inline-block;
+        
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+
+        & > a:link,
+        & > a:visited{
+            color:$orange-color;
+        }
+
+        & > a:hover,
+        & > a:active{
+            color:$white-color;
+        }
+        
+    }
+
+    //Footer author column
+
+    &__author{
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 200;
+        color:$orange-color;
+
+        @include design(tab-horizontal){
+            padding-top: 9rem;
+        }
+
+        & > a:link,
+        & > a:visited{
+            color:$orange-color;
+        }
+        
+        & > a:hover,
+        & > a:active{
+            color: $white-color;
+        }
+    }
+}

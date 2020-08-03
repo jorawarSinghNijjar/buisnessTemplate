@@ -1,0 +1,30 @@
+.two-col-container {
+  margin-top: 4rem;
+  height: 70vh;
+  width: 100%;
+  @include clearfix;
+
+  @include design(tab-horizontal) {
+    &__left-col {
+      width: 40%;
+      height: inherit;
+      padding: 18% 4rem;
+      background-color: $white-color;
+      float: left;
+    }
+
+    &__right-col {
+      width: 60%;
+      height: inherit;
+      background-image: linear-gradient(
+          to bottom,
+          rgba($blue-color, 0.5),
+          rgba($blue-color, 0.7)
+        ),
+        url("../img/students.jpg");
+      background-size: cover;
+      background-position: center;
+      float: left;
+    }
+  }
+}

@@ -1,14 +1,15 @@
 //For Mobile
 .header {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   background-image: linear-gradient(
       to bottom,
-      rgba($white-color, 0.9),
-      rgba($red-color, 0.9)
+      rgba($white-color, 0.5),
+      rgba($red-color, 0.5)
     ),
     url("../img/toronto-landscape.jpg");
   background-size: cover;
+  background-position: center;
 
   &__navbar {
     height: 8.5rem;
@@ -41,10 +42,11 @@
   &__nav-container{
     position: absolute;
     top:0;
-    left:0;
+    right:0;
     height:100vh;
     width:100%;
     background-color: $blue-color;
+    opacity:0;
     z-index: -1;
   }
 
@@ -52,6 +54,7 @@
     list-style: none;
     text-align: center;
     margin-top:8rem;
+    background-color:$blue-color; ;
     // @include center-vh;
     width:100%;
   }
@@ -81,7 +84,7 @@
     padding:1.5rem 0;
     width:80%;
     margin: 0 auto;
-    border-bottom: 1px solid $orange-color-light;
+    border-bottom: .2rem solid $orange-color-light;
   
     a,
     a:link,
@@ -92,15 +95,46 @@
     }
   }
 
+  &__dropdown-list{
+    background-color: $blue-color;
+    list-style: none;
+    margin-top: 1rem;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    opacity: 0;
+
+    &-item{
+      background-color: $blue-color;
+      display: block;
+      margin:0 auto;
+      width:80%;
+      
+      &:not(:last-child){
+        border-bottom: .2rem solid $orange-color-light;
+      }
+
+      & > a:hover,
+      & > a:active{
+        background-color: $blue-color-dark;
+        color: white;
+      } 
+    }
+    
+  }
+
   &__heading-container{
     width:80%;
     position: absolute;
-    top:30rem;
+    top:34rem;
     left:2rem;
   }
 
   &__primary-heading{
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 300;
     color: $blue-color;
     display: inline-block;
@@ -113,50 +147,45 @@
   }
 
 }
+
 // For Desktop
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
   .header {
 
     &__tagline {
-      float: left;
       padding-top: 2.5rem;
       font-size: 2rem;
-      color: $blue-color;
     }
 
     &__logo-box {
-      height: inherit;
-      width: 50%;
-      display: inline-block;
-    } 
+      float: left;
+      width:30%;
+    }
 
     &__logo {
-      height: 8rem;
-      padding: 1rem;
-      padding-bottom: 1rem;
       padding-left: 3rem;
-      float: left;
     }
 
     &__menu-icon{
       display: none;
     }
 
+
     &__nav-container{
       position: absolute;
-      left:50%;
-      width:50%;
+      left:30%;
+      width:70%;
       height: inherit;
       background-color: transparent;
       z-index: 1;
+      opacity: 100%;
     }
 
     &__nav {
       float: right;
-      list-style: none;
       height: inherit;
-      width: 100%;
       margin-top:0;
+      background-color: transparent;
     }
 
     &__nav-item {
@@ -166,26 +195,26 @@
       margin-left: 1rem;
       height: inherit;
       opacity: 100%;
-      width: max-content;
+      width: auto;
       border:none;
 
       &:first-child{
         display: none;
       }
 
-      a {
-        display: inline;
+      & > a {
+        display: inline-block;
         padding: 1rem 3rem;
         transition: all 0.5s;
       }
 
-      a:link,
-      a:visited {
+      & > a:link,
+      & > a:visited {
         color: $blue-color;
       }
 
-      a:hover,
-      a:active {
+      & > a:hover,
+      & > a:active {
         background-color: $blue-color;
         color: $orange-color-light;
         box-shadow: 0 1rem 2rem rgba($black-color, 0.3);
@@ -196,8 +225,44 @@
 
     &__dropdown-list{
       list-style: none;
-      background-color: $blue-color;
-      transform: scaleY(0);
+      position: absolute;
+      top:7rem;
+      left: 0;
+      width:70%;
+      height:8.5rem;
+      opacity: 100%;
+      display: block;
+      background-color: transparent;
+      box-shadow: none;
+      display: none;
+
+      &-item{
+        display: inline-block;
+        width:auto;
+        border:none;
+        background-color: transparent;
+        
+        &:not(:last-child){
+          border:none;
+        }
+
+        & > a:link,
+        & > a:visited{
+          color:$blue-color;
+        }
+
+        & > a:hover,
+        & > a:active{
+          background-color: $blue-color-dark;
+          color: $orange-color-light;
+        } 
+      }
+      
+    }
+
+    &__dropdown-btn:hover &__dropdown-list{
+      display: block;
+      box-shadow: none;
     }
 
     &__heading-container{

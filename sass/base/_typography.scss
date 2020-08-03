@@ -13,6 +13,19 @@ a{
 
 .secondary-heading{
   color: $blue-color;
-  font-size:3rem;
+  font-size:3.5rem;
+
+  &__sub{
+    font-size: 2rem;
+    color:$blue-color;
+  }
+}
+
+.tertiary-heading{
+  font-size: 3rem;
+}
+
+.description{
+  font-size: 1.6rem;
 }
 

@@ -1,0 +1,44 @@
+.highlight-section{
+    margin-top: 7rem;
+    padding:4rem 10rem;
+
+    &__heading{
+        text-align: center;
+    
+        &--sub{
+            text-align: center;
+        }
+    }
+
+    &__post-content{
+        margin-top:40%;
+        padding:2rem;
+    }
+
+    &__post-title{
+        font-size: 2.5rem ;
+        color:$white-color;
+        border:.3rem solid white;
+        display: inline-block;
+        padding:.5rem 2rem;
+    }
+
+    &__post-description {
+        
+      & > a:link,
+      & > a:visited {
+          letter-spacing: .2rem;
+        color: $white-color;
+        font-size:2rem;
+        font-weight:600;
+      }
+
+      & > a:hover,
+      & > a:active{
+          color: $orange-color-light;
+          text-decoration: underline;
+      }
+    }
+
+}
+

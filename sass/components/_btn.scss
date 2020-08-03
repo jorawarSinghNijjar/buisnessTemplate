@@ -6,12 +6,14 @@
         padding: 1rem 1.5rem;
         border-radius: .2rem;
         box-shadow: $default-shadow;
+        transition: all .5s;
     }
 
     &:hover,
     &:active{
         background-color: $blue-color;
         color:$orange-color-light;
+        transform: translateY(-.8rem);
     }
 
     &__light-blue{

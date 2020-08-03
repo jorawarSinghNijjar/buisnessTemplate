@@ -9,10 +9,23 @@
     @include clearfix;
 
     [class^="col-"] {
-        float: left;
 
-        &:not(:last-child){
-            margin-right: $gutter-horizontal;
+        width:100%;
+
+        @include design(tab-portrait){
+            float: left;
+
+            &:not(:last-child){
+                margin-right: $gutter-horizontal;
+            }
         }
+        
     }
+
+    @include design(tab-horizontal){
+        .col-1-of-3 {
+            width: calc((100% - #{$gutter-horizontal} * 2) / 3);
+          }
+    }
+    
 }
