@@ -241,6 +241,10 @@
         width:auto;
         border:none;
         background-color: transparent;
+
+        &:first-child{
+          display: none;
+        }
         
         &:not(:last-child){
           border:none;

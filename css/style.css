@@ -67,21 +67,28 @@ a {
   left: 50%;
   transform: translate(-50%, -50%); }
 
-.btn:link, .btn:visited {
+.btn {
   display: inline-block;
   padding: 1rem 1.5rem;
   border-radius: .2rem;
-  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4);
-  transition: all .5s; }
-
-.btn:hover, .btn:active {
-  background-color: #072652;
-  color: #ecb18e;
-  transform: translateY(-0.8rem); }
-
-.btn__light-blue {
-  background-color: #0074D9;
-  color: #f7f1f1; }
+  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4); }
+  .btn:link, .btn:visited {
+    transition: all .5s; }
+  .btn:hover, .btn:active {
+    background-color: #072652;
+    color: #ecb18e;
+    transform: translateY(-0.5rem); }
+  .btn__light-blue {
+    background-color: #0074D9;
+    color: #f7f1f1; }
+  .btn__outline:link, .btn__outline:visited {
+    border: 0.2rem solid #0074D9;
+    border-radius: .1rem;
+    color: #0074D9;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+  .btn__outline:hover, .btn__outline:active {
+    background-color: #0074D9;
+    color: #f7f1f1; }
 
 .two-col-container {
   margin-top: 4rem;
@@ -91,20 +98,29 @@ a {
     content: "";
     clear: both;
     display: table; }
-  @media (min-width: 56.25em) {
-    .two-col-container__left-col {
-      width: 40%;
-      height: inherit;
-      padding: 18% 4rem;
-      background-color: #f7f1f1;
-      float: left; }
-    .two-col-container__right-col {
-      width: 60%;
-      height: inherit;
-      background-image: linear-gradient(to bottom, rgba(7, 38, 82, 0.5), rgba(7, 38, 82, 0.7)), url("../img/students.jpg");
-      background-size: cover;
-      background-position: center;
-      float: left; } }
+  .two-col-container__left-col {
+    width: 100%;
+    height: 40%;
+    background-color: #f7f1f1;
+    padding: 1rem; }
+    @media (min-width: 56.25em) {
+      .two-col-container__left-col {
+        width: 40%;
+        height: inherit;
+        padding: 18% 4rem;
+        float: left; } }
+  .two-col-container__right-col {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background-image: linear-gradient(to bottom, rgba(7, 38, 82, 0.5), rgba(7, 38, 82, 0.7)), url("../img/students.jpg");
+    background-size: cover;
+    background-position: center; }
+    @media (min-width: 56.25em) {
+      .two-col-container__right-col {
+        width: 60%;
+        height: inherit;
+        float: left; } }
 
 .header {
   width: 100%;
@@ -277,6 +293,8 @@ a {
       width: auto;
       border: none;
       background-color: transparent; }
+      .header__dropdown-list-item:first-child {
+        display: none; }
       .header__dropdown-list-item:not(:last-child) {
         border: none; }
       .header__dropdown-list-item > a:link,
@@ -395,15 +413,20 @@ a {
       color: #f7f1f1; }
 
 .highlight-section {
-  margin-top: 7rem;
-  padding: 4rem 10rem; }
+  margin-top: 3rem;
+  padding: 1rem 8%; }
   .highlight-section__heading {
     text-align: center; }
     .highlight-section__heading--sub {
       text-align: center; }
   .highlight-section__post-content {
-    margin-top: 40%;
-    padding: 2rem; }
+    padding: 2rem;
+    position: absolute;
+    top: 40%;
+    height: inherit; }
+    @media (min-width: 56.25em) {
+      .highlight-section__post-content {
+        top: 60%; } }
   .highlight-section__post-title {
     font-size: 2.5rem;
     color: #f7f1f1;
@@ -420,3 +443,6 @@ a {
   .highlight-section__post-description > a:active {
     color: #ecb18e;
     text-decoration: underline; }
+  .highlight-section__description-btn {
+    margin-top: 2rem;
+    font-size: 1.8rem; }

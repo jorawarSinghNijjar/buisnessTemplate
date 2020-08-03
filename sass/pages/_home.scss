@@ -1,6 +1,11 @@
 .highlight-section{
-    margin-top: 7rem;
-    padding:4rem 10rem;
+    margin-top: 3rem;
+    padding:1rem 8%;
+
+    @include design(tab-horizontal){
+        // padding:4rem 15rem;
+    }
+    
 
     &__heading{
         text-align: center;
@@ -10,9 +15,16 @@
         }
     }
 
-    &__post-content{
-        margin-top:40%;
+    &__post-content{ 
         padding:2rem;
+        position: absolute;
+        top:40%;
+        height: inherit;
+
+        @include design(tab-horizontal){
+            top:60%;
+        }
+        
     }
 
     &__post-title{
@@ -38,6 +50,11 @@
           color: $orange-color-light;
           text-decoration: underline;
       }
+    }
+
+    &__description-btn{
+        margin-top:2rem;
+        font-size:1.8rem;
     }
 
 }

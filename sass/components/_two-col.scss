@@ -4,18 +4,24 @@
   width: 100%;
   @include clearfix;
 
-  @include design(tab-horizontal) {
-    &__left-col {
+  &__left-col {
+      width:100%;
+      height:40%;
+      background-color: $white-color;
+      padding:1rem;
+
+    @include design(tab-horizontal) {
       width: 40%;
       height: inherit;
       padding: 18% 4rem;
-      background-color: $white-color;
       float: left;
     }
+  }
 
-    &__right-col {
-      width: 60%;
-      height: inherit;
+  &__right-col {
+      position: relative;
+      width:100%;
+      height:60%;
       background-image: linear-gradient(
           to bottom,
           rgba($blue-color, 0.5),
@@ -24,6 +30,10 @@
         url("../img/students.jpg");
       background-size: cover;
       background-position: center;
+
+    @include design(tab-horizontal) {
+      width: 60%;
+      height: inherit;
       float: left;
     }
   }
